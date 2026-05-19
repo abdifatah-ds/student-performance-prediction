@@ -28,7 +28,11 @@ student-performance-prediction/
 │   ├── 1_data_cleaning.ipynb
 │   ├── 2_eda.ipynb
 │   ├── 3_modeling.ipynb
-│   └── 4_evaluation.ipynb
+│   ├── 4_evaluation.ipynb
+│   ├── chart1_grade_distribution.png
+│   ├── chart2_feature_importance.png
+│   ├── chart3_model_comparison.png
+│   └── chart4_confusion_matrices.png
 ├── index.html
 ├── requirements.txt
 └── README.md
@@ -81,13 +85,29 @@ This project follows a four-stage pipeline:
 | Model | Accuracy | Precision | Recall | F1 Score | CV Mean |
 |---|---|---|---|---|---|
 | Logistic Regression | 68.4% | 72.6% | 84.9% | 78.3% | 67.7% |
-| Decision Tree | 65.8% | 70.3% | 84.9% | 76.9% | 67.1% |
+| Decision Tree | 65.8% | 70.3% | 84.9% | 76.9% — | 67.1% |
 | **Random Forest ✓** | **67.1%** | **70.8%** | **86.8%** | **78.0%** | **71.2%** |
 
 ### Selected Model — Random Forest
 - Highest cross-validation score (71.2%) — best generalization
 - Highest recall (86.8%) — correctly identifies 87% of at-risk students
 - Lowest variance across folds (std=0.038) — most consistent model
+
+---
+
+## 📉 Visualizations
+
+### Grade Distribution & Pass/Fail Breakdown
+![Grade Distribution](notebooks/chart1_grade_distribution.png)
+
+### Top 15 Most Important Features
+![Feature Importance](notebooks/chart2_feature_importance.png)
+
+### Model Performance Comparison
+![Model Comparison](notebooks/chart3_model_comparison.png)
+
+### Confusion Matrices — All Three Models
+![Confusion Matrices](notebooks/chart4_confusion_matrices.png)
 
 ---
 
